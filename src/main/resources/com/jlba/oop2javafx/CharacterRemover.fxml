@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="320.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlba.oop2javafx.CharacterRemover">
+    <children>
+        <Label fx:id="characterLabel" text="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0" spacing="20.0">
+            <children>
+                <CheckBox fx:id="vowelCheckbox" depthTest="DISABLE" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Vowels">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </CheckBox>
+                <CheckBox fx:id="consonantCheckbox" depthTest="DISABLE" mnemonicParsing="false" text="Consonants">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </CheckBox>
+                <CheckBox fx:id="numberCheckbox" depthTest="DISABLE" mnemonicParsing="false" text="Numbers">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </CheckBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+        <Button fx:id="removeButton" mnemonicParsing="false" onMouseClicked="#onRemove" text="Remove" />
+        <Button fx:id="restoreButton" mnemonicParsing="false" onMouseClicked="#onRestore" text="Restore" />
+    </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>
