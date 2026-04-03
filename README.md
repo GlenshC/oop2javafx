@@ -1,6 +1,7 @@
 # JavaFX GUI
 
 JavaFX GUI. Built using Java and OOPs.  
+Built with **Overhead Only Programming** paradigm in mind.
 
 **Author:** Glenshayne Belarmino (Jolo's Bizarre Adventure #4)– [@GlenshC](https://github.com/GlenshC)
 
