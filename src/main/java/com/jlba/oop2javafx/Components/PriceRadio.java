@@ -7,6 +7,7 @@ public class PriceRadio extends RadioButton {
     public PriceRadio(String text, double discount) {
         super(text);
         this.discount = discount;
+        setMaxWidth(Double.MAX_VALUE);
     }
 
     public double getDiscount() {

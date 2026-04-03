@@ -10,20 +10,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 // APP #3
-public class CharacterRemover extends Application {
+public class CharacterRemoverFXML extends Application {
     public String str;
     public Label characterLabel;
     public CheckBox vowelCheckbox;
     public CheckBox consonantCheckbox;
     public CheckBox numberCheckbox;
 
-    public CharacterRemover() {
+    public CharacterRemoverFXML() {
         str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CharacterRemover.class.getResource("CharacterRemover.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(CharacterRemoverFXML.class.getResource("CharacterRemover.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Character Remover #3");
         stage.setScene(scene);

@@ -1,4 +1,4 @@
-package com.jlba.oop2javafx;
+package com.jlba.oop2javafx.NoFXML;
 
 import com.jlba.oop2javafx.Components.FoodSelection;
 import com.jlba.oop2javafx.Components.PriceRadio;
@@ -49,21 +49,15 @@ public class FoodOrderingSystem extends Application {
         // Food and Discount Layout
         VBox foodVbox = new VBox();
         foodVbox.setSpacing(4);
-        foodVbox.setAlignment(Pos.TOP_LEFT);
+        foodVbox.setAlignment(Pos.TOP_CENTER);
 
         VBox discountVbox = new VBox();
         discountVbox.setSpacing(4);
-        discountVbox.setAlignment(Pos.TOP_LEFT);
+        discountVbox.setAlignment(Pos.TOP_CENTER);
 
         hbox.getChildren().addAll(foodVbox, discountVbox);
+        HBox.setHgrow(foodVbox, Priority.ALWAYS);
 
-        // Expand hbox children
-        for (Node node : hbox.getChildren()) {
-            if (node instanceof Region r) {
-                HBox.setHgrow(node, Priority.ALWAYS);
-                r.setMaxWidth(Double.MAX_VALUE);
-            }
-        }
 
         // Food Section
         Label foodsTitle = new Label("Foods");
@@ -95,13 +89,13 @@ public class FoodOrderingSystem extends Application {
 
         discountVbox.getChildren().addAll(discountTitle, rbNone, rb5, rb10, rb15);
 
-        btnOrder.setOnMouseClicked(this::onOrder);
+        btnOrder.setOnMouseClicked(e -> {onOrder(e, availableFoods, discountGroup);});
 
         stage.setScene(scene);
         stage.show();
     }
 
-    private void onOrder(MouseEvent e) {
+    public static void onOrder(MouseEvent e, List<FoodSelection> availableFoods, ToggleGroup discountGroup) {
         if (e.getButton() == MouseButton.PRIMARY) {
             double total = 0;
             for (FoodSelection food : availableFoods) {

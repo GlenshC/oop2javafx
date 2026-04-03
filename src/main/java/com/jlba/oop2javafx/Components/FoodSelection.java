@@ -31,6 +31,7 @@ public class FoodSelection extends HBox {
 
         setPickOnBounds(true);
 
+        setMaxWidth(Double.MAX_VALUE);
         addEventFilter(MouseEvent.MOUSE_CLICKED, this::onMouseClicked);
     }
 
